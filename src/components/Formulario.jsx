@@ -22,8 +22,10 @@ const Formulario = () => {
         <>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3 d-flex" controlId="tarea">
-                <Form.Control type='text' placeholder='Ingrese aqui el nombre del color' onChange={(e)=>{setNombre(e.target.value)}} value={nombre}/>
-                <Form.Control type='text' placeholder='Ingrese aqui el codigo del color en hexadecimal' onChange={(e)=>{setCodigo(e.target.value)}} value={codigo}/>
+                <Form.Control type='text' placeholder='Ingrese aqui el nombre del color' 
+                    onChange={(e)=>{setNombre(e.target.value)}} value={nombre}/>
+                <Form.Control type='text' placeholder='Ingrese aqui el codigo del color en hexadecimal' 
+                    onChange={(e)=>{setCodigo(e.target.value)}} value={codigo}/>
                 <Button variant='success' type='submit'>Ingresar</Button>
             </Form.Group>
         </Form>

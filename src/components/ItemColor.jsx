@@ -11,7 +11,7 @@ const ItemColor = ({color}) => {
     };
     return (
         <>
-        <Card className='text-center col-3 m-2'>
+        <Card className='text-center col-5 m-2'>
             <Card.Header>
                 <h2>{color.nombre}</h2>
             </Card.Header>
