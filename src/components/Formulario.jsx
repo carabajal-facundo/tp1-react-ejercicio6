@@ -18,6 +18,11 @@ const Formulario = () => {
         setCodigo('');
     }
 
+    const borrarColor = (color)=>{
+        let copiaColores = colores.filter((color_)=>color_.codigo!==color.codigo);
+        setColores(copiaColores);
+    }
+
     return (
         <>
         <Form onSubmit={handleSubmit}>
@@ -29,7 +34,7 @@ const Formulario = () => {
                 <Button variant='success' type='submit'>Ingresar</Button>
             </Form.Group>
         </Form>
-        <ListadoColores colores={colores}></ListadoColores>
+        <ListadoColores borrarColor={borrarColor} colores={colores}></ListadoColores>
         </>
     );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import {Card} from 'react-bootstrap';
+import {Button, Card} from 'react-bootstrap';
 import '../js/color'
 import Color from '../js/color';
 
-const ItemColor = ({color}) => {
+const ItemColor = ({color, borrarColor}) => {
     const estilo = {
         background: color.codigo,
         whidth: '100%',
@@ -18,6 +18,9 @@ const ItemColor = ({color}) => {
             <Card.Body>
                 <div style={estilo}/>
             </Card.Body>
+            <Card.Footer>
+                <Button onClick={()=>borrarColor(color)} variant='danger'>Borrar</Button>
+            </Card.Footer>
         </Card>
         </>
     );
